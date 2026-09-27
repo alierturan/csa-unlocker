@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Computer Systems A Unlocker",
+  "short_name": "CSA Unlocker",
+  "description": "Unlocks future content on the uob-csa.github.io page.",
+  "version": "1.1",
+  "author": "Ali Erturan",
+  "host_permissions": [
+    "*://uob-csa.github.io/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://uob-csa.github.io/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "csa-unlocker@alierturan.com",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "icons": {
+    "32": "icon.svg",
+    "64": "icon.svg"
+  }
+}
